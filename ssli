@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# show tcp & udp listening prosess
+# add to sudoers: $USERNAME ALL=(root) NOPASSWD: /usr/bin/ss
+
+sudo ss -ltupn | awk '{split($7,str,"\""); printf "%-5s \t %-20s \t",$1,$5 ; print str[2]}'

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# ps_mem.py wrapper
+
+D=$(dirname $(readlink -nf $(which "$0")))
+$D/ps_mem.py "$@"
+[[ $? == 1 ]] && echo "EXAMPLE USAGE: $(basename $0) -p \$(pgrep -d \",\" bash)"

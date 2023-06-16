@@ -1,0 +1,5 @@
+#!/bin/bash
+
+duc ls | head -n 42
+
+read -p "PRESS ENTER" x
